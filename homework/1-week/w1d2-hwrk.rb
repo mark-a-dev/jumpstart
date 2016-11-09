@@ -29,16 +29,16 @@ def two_sum(array, target)
 
           return true
 
-        end
+        end #end of if statement
 
 
       j+=1
-    end
+    end #end of nested while loop
 
     i+=1
-  end
+  end #end of first while loop
 
-end
+end #end of method
 
 puts "------Two Sum------"
 puts two_sum([1,2,3,4,5,6], 8) == true
