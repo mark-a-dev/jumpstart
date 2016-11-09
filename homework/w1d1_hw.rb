@@ -6,6 +6,14 @@ def remove_vowels(string)
   vowelless_string = ""
   vowels = ["a","e","i","o","u"]
 
+  string.each_char do |char|
+    unless vowels.include?(char)
+      vowelless_string += char
+    end
+  end
+  puts vowelless_string
+  return vowelless_string
+
 end
 
 puts "------Remove Vowels------"
