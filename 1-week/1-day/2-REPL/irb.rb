@@ -1,3 +1,6 @@
+# playing with pointers
+
+
 2+3
 
 require "pry"

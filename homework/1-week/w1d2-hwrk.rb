@@ -40,6 +40,8 @@ def two_sum(array, target)
 
 end #end of method
 
+
+
 puts "------Two Sum------"
 puts two_sum([1,2,3,4,5,6], 8) == true
 puts two_sum([1,2,3,4,5,6], 18) == false

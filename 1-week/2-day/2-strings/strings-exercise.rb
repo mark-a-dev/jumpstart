@@ -10,6 +10,7 @@
 #start_with?
 #reverse
 
+
 # Write a method #capitalize that accepts a string as an argument and capitalizes the first letter of the string.
 # Note: Do not use the built in method String#capitalize
  # capitalize("yahoo!") == "Yahoo!"

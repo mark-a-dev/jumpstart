@@ -1,3 +1,5 @@
+# Methods Exercises
+
 #print_thrice
 
 def print_thrice(string)

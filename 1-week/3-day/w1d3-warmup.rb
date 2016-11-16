@@ -38,6 +38,8 @@ puts vowel_censor("Supercalifragilisticexpialidocious") == "SXpXrcXlXfrXgXlXstXc
 
 
 
+
+
 # Print 10
 # ----------------------------------------
 # Write a method, #array_print_10, that puts the numbers 0 - 9 using an array
