@@ -16,6 +16,7 @@ def remove_vowels(string)
 
 end
 
+
 puts "------Remove Vowels------"
 puts remove_vowels("abcde") == "bcd"
 puts remove_vowels("icy") == "cy"

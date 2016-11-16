@@ -1,3 +1,4 @@
+
 # Vowel Censor
 # ----------------------------------------
 # Write the function vowel_censor that takes in a string and replaces
@@ -26,6 +27,8 @@ end
 #   * NOTE: you do not need to know regex to make it through jumpstart, but it is a nice tool!
 #   * What does the #each_char method do?
 #   * What is the name of this operator '<<' and what string method does it perform?
+
+
 
 
 

@@ -7,6 +7,7 @@ def divisor_plus_remainder(big_int, small_int)
   big_int / small_int + big_int % small_int
 end
 
+
 # puts divisor_plus_remainder(7,2)
 
 #   2.
