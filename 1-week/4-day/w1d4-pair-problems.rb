@@ -4,18 +4,23 @@
 # super long) ruby method names.
 
 def rubyify(sentence)
+
   letters = "abcdefghijklmnopqrstuvwxyz"
+
   new_sentence = sentence.downcase
+
   new_sentence.each_char do |char|
     if char == " "
       new_sentence[char] = "_"
     end
   end
+
   puts new_sentence
   new_sentence = new_sentence.delete(".")
   new_sentence = new_sentence.delete("?")
   puts new_sentence
   new_sentence
+
 end
 
 # puts "---------Rubyify----------"
@@ -25,7 +30,11 @@ end
 
 
 
+
+
 # ----------------- Switch Roles!
+
+
 
 
 
