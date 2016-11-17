@@ -50,10 +50,10 @@ end
 
 puts "-------Greatest Common Factor-------"
 
-puts greatest_common_factor(6, 10) == 2
-puts greatest_common_factor(10, 15) == 5
-puts greatest_common_factor(4, 7) == 1
-puts greatest_common_factor(4, 8) == 4
+# puts greatest_common_factor(6, 10) == 2
+# puts greatest_common_factor(10, 15) == 5
+# puts greatest_common_factor(4, 7) == 1
+# puts greatest_common_factor(4, 8) == 4
 
 # Panoramic Pairs
 # ------------------------------------------------------------------------------
@@ -65,13 +65,31 @@ puts greatest_common_factor(4, 8) == 4
 # Assume the panorama wraps around.
 
 def panoramic_pairs(landmarks)
-  #
-  # your code goes here
-  #
+  pairs =[]
+  landmarks.each_with_index do |landmark, index|
+
+
+      current_pair = []
+      puts index
+
+      if landmarks.last == landmarks[index]
+        current_pair.push(landmarks[index])
+        current_pair.push(landmarks[0])
+
+      else
+        current_pair.push(landmarks[index])
+        current_pair.push(landmarks[index+1])
+      end
+      p current_pair
+      pairs << current_pair
+      p pairs
+
+
+  end
+  pairs
 end
 
-puts "-------Panoramic Pairs-------"
-
+# puts "-------Panoramic Pairs-------"
 # landmarks_1 = ["House", "Horse"]
 # pairs_1 = [["House", "Horse"], ["Horse", "House"]]
 #
@@ -99,16 +117,16 @@ def two_degrees_away(facebook, name)
 end
 
 
-# puts "-------Two Degrees of Separation-------"
-#
-# facebook_1 = {
-#   "Harry Potter" => ["Ron Weasley"],
-#   "Ron Weasley" => ["Harry Potter", "Fred Weasley"],
-#   "Fred Weasley" => ["Ron Weasley"]
-# }
-#
-# friends_1 = ["Fred Weasley"]
-#
+puts "-------Two Degrees of Separation-------"
+
+facebook_1 = {
+  "Harry Potter" => ["Ron Weasley"],
+  "Ron Weasley" => ["Harry Potter", "Fred Weasley"],
+  "Fred Weasley" => ["Ron Weasley"]
+}
+
+friends_1 = ["Fred Weasley"]
+
 # puts two_degrees_away(facebook_1, "Harry Potter") == friends_1
 #
 #
