@@ -29,9 +29,23 @@
 # the greatest common factor of 10 and 15 is 5
 
 def greatest_common_factor(first_number, second_number)
-  #
-  # your code goes here
-  #
+  if first_number >
+    number_end = second_number
+  else
+    number_end = first_number
+  end
+
+  gcf = 0
+  i = 1
+  while i <= number_end
+    if first_number % i == 0 && second_number % i ==0
+      gcf = i
+    end
+    i+=1
+  end
+
+  gcf
+
 end
 
 puts "-------Greatest Common Factor-------"
@@ -58,15 +72,15 @@ end
 
 puts "-------Panoramic Pairs-------"
 
-landmarks_1 = ["House", "Horse"]
-pairs_1 = [["House", "Horse"], ["Horse", "House"]]
-
-puts panoramic_pairs(landmarks_1) == pairs_1
-
-landmarks_2 = ["Tree", "Mountain", "Ocean", "Cottage"]
-pairs_2 = [["Tree", "Mountain"], ["Mountain", "Ocean"], ["Ocean", "Cottage"], ["Cottage", "Tree"]]
-
-puts panoramic_pairs(landmarks_2) == pairs_2
+# landmarks_1 = ["House", "Horse"]
+# pairs_1 = [["House", "Horse"], ["Horse", "House"]]
+#
+# puts panoramic_pairs(landmarks_1) == pairs_1
+#
+# landmarks_2 = ["Tree", "Mountain", "Ocean", "Cottage"]
+# pairs_2 = [["Tree", "Mountain"], ["Mountain", "Ocean"], ["Ocean", "Cottage"], ["Cottage", "Tree"]]
+#
+# puts panoramic_pairs(landmarks_2) == pairs_2
 
 
 # Two Degrees of Separation
@@ -85,31 +99,31 @@ def two_degrees_away(facebook, name)
 end
 
 
-puts "-------Two Degrees of Separation-------"
-
-facebook_1 = {
-  "Harry Potter" => ["Ron Weasley"],
-  "Ron Weasley" => ["Harry Potter", "Fred Weasley"],
-  "Fred Weasley" => ["Ron Weasley"]
-}
-
-friends_1 = ["Fred Weasley"]
-
-puts two_degrees_away(facebook_1, "Harry Potter") == friends_1
-
-
-facebook_2 = {
-  "Mark Zuckerberg" => ["Eduardo Saverin", "Dustin Moskovitz", "Sean Parker"],
-  "Eduardo Saverin" => ["Mark Zuckerberg", "Tyler Winklevoss", "Cameron Winklevoss", "Dustin Moskovitz"],
-  "Tyler Winklevoss" => ["Eduardo Saverin"],
-  "Cameron Winklevoss" => ["Eduardo Saverin"],
-  "Dustin Moskovitz" => ["Mark Zuckerberg", "Eduardo Saverin"],
-  "Sean Parker" => ["Mark Zuckerberg"]
-}
-
-friends_2 = ["Tyler Winklevoss", "Cameron Winklevoss"]
-
-puts two_degrees_away(facebook_2, "Mark Zuckerberg") == friends_2
+# puts "-------Two Degrees of Separation-------"
+#
+# facebook_1 = {
+#   "Harry Potter" => ["Ron Weasley"],
+#   "Ron Weasley" => ["Harry Potter", "Fred Weasley"],
+#   "Fred Weasley" => ["Ron Weasley"]
+# }
+#
+# friends_1 = ["Fred Weasley"]
+#
+# puts two_degrees_away(facebook_1, "Harry Potter") == friends_1
+#
+#
+# facebook_2 = {
+#   "Mark Zuckerberg" => ["Eduardo Saverin", "Dustin Moskovitz", "Sean Parker"],
+#   "Eduardo Saverin" => ["Mark Zuckerberg", "Tyler Winklevoss", "Cameron Winklevoss", "Dustin Moskovitz"],
+#   "Tyler Winklevoss" => ["Eduardo Saverin"],
+#   "Cameron Winklevoss" => ["Eduardo Saverin"],
+#   "Dustin Moskovitz" => ["Mark Zuckerberg", "Eduardo Saverin"],
+#   "Sean Parker" => ["Mark Zuckerberg"]
+# }
+#
+# friends_2 = ["Tyler Winklevoss", "Cameron Winklevoss"]
+#
+# puts two_degrees_away(facebook_2, "Mark Zuckerberg") == friends_2
 
 
 # Assign Pods
@@ -129,68 +143,68 @@ def assign_pods(students, pods)
   #
 end
 
-puts "-------Assign Pods-------"
-
-students_1 = [
-  "Scott",
-  "Asher",
-  "Julie",
-  "Rick",
-  "Jeff",
-  "Brooke",
-  "Sandra",
-  "Jim",
-  "Pete",
-  "Marta",
-  "Tanna"
-]
-
-pods_1 = [
-  "Fremont",
-  "Berkeley",
-  "San Ramon"
-]
-
-
-expected_pod_assignment_1 = {
-  "Fremont" => ["Scott", "Asher", "Julie", "Rick"],
-  "Berkeley" => ["Jeff", "Brooke", "Sandra", "Jim"],
-  "San Ramon" => ["Pete", "Marta", "Tanna"]
-}
-
-students_2 = [
-  "Scott",
-  "Asher",
-  "Julie",
-  "Rick",
-  "Jeff",
-  "Brooke",
-  "Sandra",
-  "Jim",
-  "Pete",
-  "Marta",
-  "Tanna",
-  "Fred",
-  "George"
-]
-
-pods_2 = [
-  "Fremont",
-  "Berkeley",
-  "San Ramon",
-  "Oakland"
-]
-
-
-expected_pod_assignment_2 = {
-  "Fremont" => ["Scott", "Asher", "Julie", "Rick"],
-  "Berkeley" => ["Jeff", "Brooke", "Sandra", "Jim"],
-  "San Ramon" => ["Pete", "Marta", "Tanna", "Fred"],
-  "Oakland" => ["George"]
-}
-
-puts assign_pods(students_1, pods_1) == expected_pod_assignment_1
-puts assign_pods(students_2, pods_2) == expected_pod_assignment_2
+# puts "-------Assign Pods-------"
+#
+# students_1 = [
+#   "Scott",
+#   "Asher",
+#   "Julie",
+#   "Rick",
+#   "Jeff",
+#   "Brooke",
+#   "Sandra",
+#   "Jim",
+#   "Pete",
+#   "Marta",
+#   "Tanna"
+# ]
+#
+# pods_1 = [
+#   "Fremont",
+#   "Berkeley",
+#   "San Ramon"
+# ]
+#
+#
+# expected_pod_assignment_1 = {
+#   "Fremont" => ["Scott", "Asher", "Julie", "Rick"],
+#   "Berkeley" => ["Jeff", "Brooke", "Sandra", "Jim"],
+#   "San Ramon" => ["Pete", "Marta", "Tanna"]
+# }
+#
+# students_2 = [
+#   "Scott",
+#   "Asher",
+#   "Julie",
+#   "Rick",
+#   "Jeff",
+#   "Brooke",
+#   "Sandra",
+#   "Jim",
+#   "Pete",
+#   "Marta",
+#   "Tanna",
+#   "Fred",
+#   "George"
+# ]
+#
+# pods_2 = [
+#   "Fremont",
+#   "Berkeley",
+#   "San Ramon",
+#   "Oakland"
+# ]
+#
+#
+# expected_pod_assignment_2 = {
+#   "Fremont" => ["Scott", "Asher", "Julie", "Rick"],
+#   "Berkeley" => ["Jeff", "Brooke", "Sandra", "Jim"],
+#   "San Ramon" => ["Pete", "Marta", "Tanna", "Fred"],
+#   "Oakland" => ["George"]
+# }
+#
+# puts assign_pods(students_1, pods_1) == expected_pod_assignment_1
+# puts assign_pods(students_2, pods_2) == expected_pod_assignment_2
 
 
 # Remove Letter 'A'
@@ -204,13 +218,13 @@ def remove_letter_a(words)
   #
 end
 
-puts "-------Remove Letter 'A'-------"
-
-words_1 = ["blueberry", "apple", "banana", "peach"]
-without_a_1 = ["blueberry", "pple", "bnn", "pech"]
-
-words_2 = ["syllabus", "smirk", "salamander", "saaaaaaa"]
-without_a_2 = ["syllbus", "smirk", "slmnder", "s"]
-
-puts remove_letter_a(words_1) == without_a_1
-puts remove_letter_a(words_2) == without_a_2
+# puts "-------Remove Letter 'A'-------"
+#
+# words_1 = ["blueberry", "apple", "banana", "peach"]
+# without_a_1 = ["blueberry", "pple", "bnn", "pech"]
+#
+# words_2 = ["syllabus", "smirk", "salamander", "saaaaaaa"]
+# without_a_2 = ["syllbus", "smirk", "slmnder", "s"]
+#
+# puts remove_letter_a(words_1) == without_a_1
+# puts remove_letter_a(words_2) == without_a_2
